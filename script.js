@@ -27,9 +27,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
+            // Show loading state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            // Hide any existing messages
+            const formMessage = document.getElementById('form-message');
+            formMessage.style.display = 'none';
+            formMessage.className = 'form-message';
+            
             // Simulate form submission (in a real implementation, you'd send this to a server)
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            contactForm.reset();
+            setTimeout(() => {
+                // Create mailto link for now (you can integrate with EmailJS, Formspree, or similar services)
+                const mailtoLink = `mailto:prannay.khushalani5@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                
+                // Show success message
+                formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+                formMessage.className = 'form-message success';
+                formMessage.style.display = 'block';
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+                
+                // Optionally open email client
+                // window.open(mailtoLink);
+            }, 1000);
         });
     }
 
