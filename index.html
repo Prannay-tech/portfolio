@@ -3,140 +3,477 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prannay Khushalani | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="icon" href="/assets/owl-favicon.png">
+  <title>Prannay Khushalani | Data Science Professional</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦉</text></svg>">
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body>
+  <canvas id="bg-canvas"></canvas>
 
-  <!-- Hero Section -->
-  <section class="text-center py-20">
-    <img src="/assets/prannay-photo.png" alt="Prannay Khushalani" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-green-400">
-    <h1 class="text-4xl font-bold">Hi, I'm Prannay</h1>
-    <p class="text-lg mt-2">Data Analyst | AI Developer | UTD Graduate</p>
-    <div class="mt-4 space-x-3">
-      <a href="/assets/Prannay_Resume.pdf" class="px-4 py-2 bg-green-500 text-black rounded hover:bg-green-400">Download Resume</a>
-      <a href="#contact" class="px-4 py-2 border border-green-500 text-green-400 rounded hover:bg-green-500 hover:text-black">Contact</a>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Prannay Khushalani</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </section>
-
-  <!-- TOC -->
-  <nav class="text-center text-green-400 space-x-4 py-6 border-t border-b border-gray-700">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- About -->
-  <section id="about" class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-2xl font-bold mb-4">🚀 Quick Pitch</h2>
-    <div class="grid md:grid-cols-3 gap-6 text-sm text-gray-300">
-      <div>
-        <h3 class="text-green-400 font-semibold">🎓 Education</h3>
-        <p>MS Business Analytics, UTD (May 2025)</p>
-        <p>Cert: Applied ML, Business Decision Analytics</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="media/prannay_profilepicture.jpg" alt="Prannay Khushalani" class="hero-image">
+    <h1 class="hero-title">Hi, I'm Prannay</h1>
+    <p class="hero-subtitle">Data Science professional with advanced expertise in Data Analytics, Predictive Modeling, Machine Learning, and Strategic Decision-Making.</p>
+    <p class="hero-description">"In God we trust. All others must bring data."</p>
+    <div class="mb-2">
+      <a href="assets/Prannay_Khushalani_Resume_V3.pdf" class="btn">Download Resume</a>
+      <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section">
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+      <p class="card-text">
+        Hey there! I'm Prannay, a data science professional with a passion for turning complex data into actionable insights. 
+        I recently completed my MS in Business Analytics and AI from the University of Texas at Dallas, where I discovered my love 
+        for bridging the gap between technical analysis and business strategy.
+      </p>
+      <p class="card-text">
+        My journey started with a simple curiosity about how data can tell stories and drive decisions. Today, I specialize 
+        in machine learning, predictive analytics, and building intelligent solutions that actually make a difference. 
+        From developing advanced chatbots to creating disease prediction models with 99% accuracy, I love tackling 
+        challenging problems that have real-world impact.
+      </p>
+      <p class="card-text">
+        As a business analyst at heart, I excel at translating technical findings into clear business recommendations. 
+        Whether it's identifying market trends, optimizing operational processes, or helping stakeholders make 
+        data-driven decisions, I thrive on making complex analytics accessible and actionable.
+      </p>
+      <p class="card-text">
+        When I'm not diving deep into datasets or building models, you'll find me exploring new technologies, 
+        contributing to open-source projects, or sharing insights through my research and publications. 
+        I believe the best solutions come from combining technical expertise with a deep understanding of business needs.
+      </p>
+      <p class="card-text">
+        Outside of work, I love listening to music, exploring new places to travel to, trekking through nature trails, 
+        and watching movies. These hobbies help me stay balanced and bring fresh perspectives to my analytical work.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section">
+    <h2 class="section-title">Skills & Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <div class="tech-grid">
+          <a href="https://www.python.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon">
+            <span class="tech-name">Python</span>
+          </a>
+          <a href="https://www.mysql.com/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="tech-icon">
+            <span class="tech-name">SQL</span>
+          </a>
+          <a href="https://www.r-project.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" class="tech-icon">
+            <span class="tech-name">R</span>
+          </a>
+        </div>
       </div>
-      <div>
-        <h3 class="text-green-400 font-semibold">🧠 Core Focus</h3>
-        <p>Data Analysis, Machine Learning, Chatbots</p>
-        <p>SQL, Python, Power BI, Azure ML</p>
+      
+      <div class="skill-category">
+        <h3>AI & Machine Learning</h3>
+        <div class="tech-grid">
+          <a href="https://tensorflow.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-icon">
+            <span class="tech-name">TensorFlow</span>
+          </a>
+          <a href="https://pytorch.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" class="tech-icon">
+            <span class="tech-name">PyTorch</span>
+          </a>
+          <a href="https://scikit-learn.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/scikitlearn.svg" alt="Scikit-learn" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">Scikit-learn</span>
+          </a>
+          <a href="https://xgboost.readthedocs.io/" target="_blank" class="tech-item">
+            <img src="https://raw.githubusercontent.com/dmlc/web-data/master/mxnet/image/xgboost-logo.png" alt="XGBoost" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">XGBoost</span>
+          </a>
+          <a href="https://lightgbm.readthedocs.io/" target="_blank" class="tech-item">
+            <img src="https://lightgbm.readthedocs.io/en/latest/_images/LightGBM_logo_black_text.svg" alt="LightGBM" class="tech-icon">
+            <span class="tech-name">LightGBM</span>
+          </a>
+          <a href="https://openai.com/" target="_blank" class="tech-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="GPT" class="tech-icon">
+            <span class="tech-name">GPT-3.5/4</span>
+          </a>
+        </div>
       </div>
-      <div>
-        <h3 class="text-green-400 font-semibold">🏆 Highlights</h3>
-        <p>IEEE Author, Built "Owlie" GPT Chatbot</p>
-        <p>99% Accuracy Disease Model</p>
+      
+      <div class="skill-category">
+        <h3>NLP & LLM Frameworks</h3>
+        <div class="tech-grid">
+          <a href="https://huggingface.co/" target="_blank" class="tech-item">
+            <img src="https://huggingface.co/front/assets/huggingface_logo.svg" alt="Hugging Face" class="tech-icon">
+            <span class="tech-name">Hugging Face</span>
+          </a>
+          <a href="https://python.langchain.com/" target="_blank" class="tech-item">
+            <img src="https://python.langchain.com/img/favicon.ico" alt="LangChain" class="tech-icon">
+            <span class="tech-name">LangChain</span>
+          </a>
+          <a href="https://docs.llamaindex.ai/" target="_blank" class="tech-item">
+            <img src="https://docs.llamaindex.ai/en/stable/_static/llamaindex-logo.png" alt="LlamaIndex" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">LlamaIndex</span>
+          </a>
+          <a href="https://www.sbert.net/" target="_blank" class="tech-item">
+            <img src="https://www.sbert.net/_static/sbert-logo.png" alt="Sentence-Transformers" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">Sentence-Transformers</span>
+          </a>
+          <a href="https://spacy.io/" target="_blank" class="tech-item">
+            <img src="https://spacy.io/static/img/logo.svg" alt="SpaCy" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">SpaCy</span>
+          </a>
+          <a href="https://www.nltk.org/" target="_blank" class="tech-item">
+            <img src="https://www.nltk.org/_static/nltk-logo.gif" alt="NLTK" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">NLTK</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Vector Databases & Embeddings</h3>
+        <div class="tech-grid">
+          <a href="https://faiss.ai/" target="_blank" class="tech-item">
+            <img src="https://faiss.ai/_static/faiss-logo.svg" alt="FAISS" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">FAISS</span>
+          </a>
+          <a href="https://www.trychroma.com/" target="_blank" class="tech-item">
+            <img src="https://www.trychroma.com/favicon.ico" alt="ChromaDB" class="tech-icon">
+            <span class="tech-name">ChromaDB</span>
+          </a>
+          <a href="https://www.pinecone.io/" target="_blank" class="tech-item">
+            <img src="https://www.pinecone.io/favicon.ico" alt="Pinecone" class="tech-icon">
+            <span class="tech-name">Pinecone</span>
+          </a>
+          <a href="https://qdrant.tech/" target="_blank" class="tech-item">
+            <img src="https://qdrant.tech/favicon.ico" alt="Qdrant" class="tech-icon">
+            <span class="tech-name">Qdrant</span>
+          </a>
+          <a href="https://weaviate.io/" target="_blank" class="tech-item">
+            <img src="https://weaviate.io/assets/images/weaviate-logo.svg" alt="Weaviate" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">Weaviate</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Web Frameworks & UI</h3>
+        <div class="tech-grid">
+          <a href="https://fastapi.tiangolo.com/" target="_blank" class="tech-item">
+            <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" class="tech-icon">
+            <span class="tech-name">FastAPI</span>
+          </a>
+          <a href="https://streamlit.io/" target="_blank" class="tech-item">
+            <img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit" class="tech-icon">
+            <span class="tech-name">Streamlit</span>
+          </a>
+          <a href="https://gradio.app/" target="_blank" class="tech-item">
+            <img src="https://gradio.app/assets/logo.svg" alt="Gradio" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">Gradio</span>
+          </a>
+          <a href="https://flask.palletsprojects.com/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="tech-icon">
+            <span class="tech-name">Flask</span>
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="tech-icon">
+            <span class="tech-name">HTML/CSS</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Big Data & Processing</h3>
+        <div class="tech-grid">
+          <a href="https://spark.apache.org/" target="_blank" class="tech-item">
+            <img src="https://spark.apache.org/images/spark-logo-trademark.png" alt="PySpark" class="tech-icon">
+            <span class="tech-name">PySpark</span>
+          </a>
+          <a href="https://hadoop.apache.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original.svg" alt="Hadoop" class="tech-icon">
+            <span class="tech-name">Hadoop</span>
+          </a>
+          <a href="https://www.snowflake.com/" target="_blank" class="tech-item">
+            <img src="https://www.snowflake.com/wp-content/themes/snowflake/assets/img/logo-blue.svg" alt="Snowflake" class="tech-icon">
+            <span class="tech-name">Snowflake</span>
+          </a>
+          <a href="https://www.databricks.com/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/databricks.svg" alt="Databricks" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">Databricks</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Cloud & MLOps</h3>
+        <div class="tech-grid">
+          <a href="https://aws.amazon.com/sagemaker/" target="_blank" class="tech-item">
+            <img src="https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png" alt="AWS SageMaker" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">AWS SageMaker</span>
+          </a>
+          <a href="https://azure.microsoft.com/en-us/products/machine-learning" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure ML" class="tech-icon">
+            <span class="tech-name">Azure ML</span>
+          </a>
+          <a href="https://cloud.google.com/vertex-ai" target="_blank" class="tech-item">
+            <img src="https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png" alt="GCP" class="tech-icon">
+            <span class="tech-name">GCP Vertex AI</span>
+          </a>
+          <a href="https://mlflow.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mlflow.svg" alt="MLflow" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">MLflow</span>
+          </a>
+          <a href="https://dvc.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dvc.svg" alt="DVC" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">DVC</span>
+          </a>
+          <a href="https://wandb.ai/" target="_blank" class="tech-item">
+            <img src="https://wandb.ai/static/images/wandb-mark-blue.svg" alt="W&B" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">W&B</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Deployment & DevOps</h3>
+        <div class="tech-grid">
+          <a href="https://www.docker.com/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon">
+            <span class="tech-name">Docker</span>
+          </a>
+          <a href="https://git-scm.com/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon">
+            <span class="tech-name">Git</span>
+          </a>
+          <a href="https://github.com/" target="_blank" class="tech-item">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="tech-icon">
+            <span class="tech-name">GitHub</span>
+          </a>
+          <a href="https://github.com/features/actions" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/githubactions.svg" alt="GitHub Actions" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">GitHub Actions</span>
+          </a>
+          <a href="https://render.com/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/render.svg" alt="Render" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">Render</span>
+          </a>
+          <a href="https://vercel.com/" target="_blank" class="tech-item">
+            <img src="https://vercel.com/favicon.ico" alt="Vercel" class="tech-icon">
+            <span class="tech-name">Vercel</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <div class="tech-grid">
+          <a href="https://jupyter.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" class="tech-icon">
+            <span class="tech-name">Jupyter</span>
+          </a>
+          <a href="https://www.anaconda.com/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/anaconda.svg" alt="Anaconda" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+            <span class="tech-name">Anaconda</span>
+          </a>
+          <a href="https://www.atlassian.com/software/jira" target="_blank" class="tech-item">
+            <img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="JIRA" class="tech-icon">
+            <span class="tech-name">JIRA</span>
+          </a>
+          <a href="https://www.linux.org/" target="_blank" class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="tech-icon">
+            <span class="tech-name">Linux</span>
+          </a>
+          <a href="https://huggingface.co/spaces" target="_blank" class="tech-item">
+            <img src="https://huggingface.co/front/assets/huggingface_logo.svg" alt="HF Spaces" class="tech-icon">
+            <span class="tech-name">HF Spaces</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="skill-category skill-category-horizontal">
+      <h3>Data Visualization & BI</h3>
+      <div class="tech-grid">
+        <a href="https://powerbi.microsoft.com/" target="_blank" class="tech-item">
+          <img src="https://powerbi.microsoft.com/pictures/application-logos/svg/powerbi.svg" alt="Power BI" class="tech-icon">
+          <span class="tech-name">Power BI</span>
+        </a>
+        <a href="https://www.tableau.com/" target="_blank" class="tech-item">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tableau.svg" alt="Tableau" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+          <span class="tech-name">Tableau</span>
+        </a>
+        <a href="https://matplotlib.org/" target="_blank" class="tech-item">
+          <img src="https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png" alt="Matplotlib" class="tech-icon">
+          <span class="tech-name">Matplotlib</span>
+        </a>
+        <a href="https://seaborn.pydata.org/" target="_blank" class="tech-item">
+          <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" class="tech-icon">
+          <span class="tech-name">Seaborn</span>
+        </a>
+        <a href="https://plotly.com/" target="_blank" class="tech-item">
+          <img src="https://plotly.com/all_static/images/icon-dash.png" alt="Plotly" class="tech-icon">
+          <span class="tech-name">Plotly</span>
+        </a>
+        <a href="https://altair-viz.github.io/" target="_blank" class="tech-item">
+          <img src="https://altair-viz.github.io/_static/altair-logo-light.png" alt="Altair" class="tech-icon">
+          <span class="tech-name">Altair</span>
+        </a>
+        <a href="https://bokeh.org/" target="_blank" class="tech-item">
+          <img src="https://bokeh.org/static/images/logo.png" alt="Bokeh" class="tech-icon">
+          <span class="tech-name">Bokeh</span>
+        </a>
+        <a href="https://d3js.org/" target="_blank" class="tech-item">
+          <img src="https://d3js.org/logo.svg" alt="D3.js" class="tech-icon">
+          <span class="tech-name">D3.js</span>
+        </a>
+        <a href="https://www.looker.com/" target="_blank" class="tech-item">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/looker.svg" alt="Looker" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+          <span class="tech-name">Looker</span>
+        </a>
+        <a href="https://www.qlik.com/" target="_blank" class="tech-item">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/qlik.svg" alt="Qlik" class="tech-icon" style="background:#fff; border-radius:6px; padding:4px;">
+          <span class="tech-name">Qlik</span>
+        </a>
+        <a href="https://www.sisense.com/" target="_blank" class="tech-item">
+          <img src="https://www.sisense.com/favicon.ico" alt="Sisense" class="tech-icon">
+          <span class="tech-name">Sisense</span>
+        </a>
+        <a href="https://www.alteryx.com/" target="_blank" class="tech-item">
+          <img src="https://www.alteryx.com/favicon.ico" alt="Alteryx" class="tech-icon">
+          <span class="tech-name">Alteryx</span>
+        </a>
+        <a href="https://www.knime.com/" target="_blank" class="tech-item">
+          <img src="https://www.knime.com/favicon.ico" alt="KNIME" class="tech-icon">
+          <span class="tech-name">KNIME</span>
+        </a>
+        <a href="https://www.rapidminer.com/" target="_blank" class="tech-item">
+          <img src="https://www.rapidminer.com/wp-content/uploads/2019/08/rapidminer-logo.png" alt="RapidMiner" class="tech-icon">
+          <span class="tech-name">RapidMiner</span>
+        </a>
+        <a href="https://www.orange.biolab.si/" target="_blank" class="tech-item">
+          <img src="https://orange.biolab.si/wp-content/uploads/2018/09/orange-logo.png" alt="Orange" class="tech-icon">
+          <span class="tech-name">Orange</span>
+        </a>
+      </div>
+    </div>
+    <div class="concepts-cloud">
+      <h3>AI/ML Concepts & Techniques</h3>
+      <div class="concepts-tags">
+        <span class="concept-tag">Supervised Learning</span>
+        <span class="concept-tag">Unsupervised Learning</span>
+        <span class="concept-tag">Deep Learning</span>
+        <span class="concept-tag">Transformers</span>
+        <span class="concept-tag">Neural Networks</span>
+        <span class="concept-tag">NLP</span>
+        <span class="concept-tag">RAG</span>
+        <span class="concept-tag">LLMs (GPT-3.5/4, LLaMA, Claude)</span>
+        <span class="concept-tag">Prompt Engineering</span>
+        <span class="concept-tag">Zero-shot/Few-shot Learning</span>
+        <span class="concept-tag">Fine-tuning</span>
+        <span class="concept-tag">LoRA</span>
+        <span class="concept-tag">PEFT</span>
+        <span class="concept-tag">MLOps</span>
+        <span class="concept-tag">CI/CD</span>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="bg-gray-800 py-12 px-4">
-    <h2 class="text-2xl font-bold text-center mb-6">🛠 Skills & Tools</h2>
-    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-100">
-      <div><span class="font-semibold text-green-400">Languages:</span> Python, SQL, R</div>
-      <div><span class="font-semibold text-green-400">ML/AI:</span> Scikit-learn, XGBoost, Azure ML</div>
-      <div><span class="font-semibold text-green-400">Dashboards:</span> Power BI, Tableau</div>
-      <div><span class="font-semibold text-green-400">Cloud:</span> Azure, Render</div>
-      <div><span class="font-semibold text-green-400">Dev Tools:</span> Git, MLflow, Hugging Face</div>
-      <div><span class="font-semibold text-green-400">Other:</span> Gradio, FAISS, NeMo</div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-2xl font-bold mb-4">📁 Featured Projects</h2>
-    <ul class="list-disc list-inside space-y-2">
-      <li><strong>Owlie Chatbot:</strong> GPT + FAISS + Gradio + Render. JSOM info retrieval AI assistant.</li>
-      <li><strong>Multiple Disease Prediction:</strong> Ensemble learning model with 99% accuracy.</li>
-      <li><strong>ASR for Indian Languages:</strong> Wave2Vec2 + NeMo, improved WER from 61.3% → 17%.</li>
-      <li><strong>BI Dashboards:</strong> Automated Power BI dashboards (Mangala Industries).</li>
-    </ul>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="bg-gray-800 py-12 px-4">
-    <h2 class="text-2xl font-bold text-center mb-6">💼 Experience</h2>
-    <div class="max-w-4xl mx-auto space-y-4 text-sm text-gray-100">
-      <div>
-        <h3 class="font-semibold text-green-400">Data Analyst – Atlas Copco</h3>
-        <p>Monitored data pipelines, performed onboarding QA, built reports (June 2023 – June 2024)</p>
+  <!-- Featured Projects -->
+  <section class="section">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3 class="project-title">"Owlie" GPT Chatbot</h3>
+        <p class="project-description">
+          Developed an intelligent chatbot using OpenAI's GPT technology with custom training and fine-tuning. 
+          Implemented advanced prompt engineering and RAG techniques for enhanced conversational capabilities.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">OpenAI API</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">RAG</span>
+          <span class="tech-tag">NLP</span>
+        </div>
       </div>
-      <div>
-        <h3 class="font-semibold text-green-400">Business Analyst – Mangala Industries</h3>
-        <p>Automated inventory, cut reorder time by 40%, saved $30K using SQL + Power BI (Jul 2022 – Dec 2022)</p>
+      <div class="project-card">
+        <h3 class="project-title">Disease Prediction Model</h3>
+        <p class="project-description">
+          Built a machine learning model achieving 99% accuracy in disease prediction using advanced algorithms 
+          and comprehensive medical datasets. Implemented feature engineering and model optimization techniques.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">99% Accuracy</span>
+          <span class="tech-tag">Healthcare</span>
+        </div>
       </div>
-      <div>
-        <h3 class="font-semibold text-green-400">Web Dev Intern – Global Dreamz</h3>
-        <p>Vue.js CRM portal dev, improved user experience, 20% sales boost (Jan 2023 – Jul 2023)</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Research -->
-  <section id="research" class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-2xl font-bold mb-4">📚 Research & Publications</h2>
-    <ul class="list-disc list-inside space-y-2 text-sm text-gray-300">
-      <li><strong>IEEE:</strong> ASR for Indian Languages using Fine-Tuned Wave2Vec2</li>
-      <li><strong>Springer:</strong> VR for Automobile Customization & Feedback</li>
-      <li><strong>AIP:</strong> Multiple Disease Prediction with Ensemble Models</li>
-    </ul>
-  </section>
-
-  <!-- Publications & Conferences -->
-  <section id="publications" class="bg-gray-800 py-12 px-4">
-    <h2 class="text-2xl font-bold text-center mb-6">📝 Publications & Conferences</h2>
-    <div class="max-w-4xl mx-auto text-sm text-gray-300 space-y-4">
-      <div>
-        <h3 class="text-green-400 font-semibold">IEEE International Conference on Advanced Networks and Telecommunications Systems</h3>
-        <p>Paper: "ASR for Indian Languages using Fine-Tuned Wave2Vec2" (2022)</p>
-      </div>
-      <div>
-        <h3 class="text-green-400 font-semibold">Springer International Conference on Intelligent Human Computer Interaction</h3>
-        <p>Paper: "VR for Automobile Customization & Feedback" (2021)</p>
-      </div>
-      <div>
-        <h3 class="text-green-400 font-semibold">AIP Conference on Data Science and Computational Intelligence</h3>
-        <p>Paper: "Predictive Analysis of Multiple Diseases using Ensemble Learning" (2021)</p>
+      <div class="project-card">
+        <h3 class="project-title">Business Analytics Dashboard</h3>
+        <p class="project-description">
+          Created comprehensive business intelligence dashboards using Power BI with advanced DAX calculations 
+          and Power Query transformations. Delivered actionable insights for strategic decision-making.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Power BI</span>
+          <span class="tech-tag">DAX</span>
+          <span class="tech-tag">Data Visualization</span>
+          <span class="tech-tag">Business Intelligence</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-gray-900 py-12 px-4 border-t border-gray-700">
-    <h2 class="text-2xl font-bold text-center mb-6">📬 Contact Me</h2>
-    <p class="text-center text-gray-300 mb-4">Email: <a href="mailto:pxk220126@utdallas.edu" class="text-green-400">pxk220126@utdallas.edu</a></p>
-    <div class="text-center space-x-4">
-      <a href="https://github.com/prannaykhushalani" class="text-green-400">GitHub</a>
-      <a href="https://linkedin.com/in/prannaykhushalani" class="text-green-400">LinkedIn</a>
-      <a href="https://researchgate.net/profile/Prannay_Khushalani" class="text-green-400">ResearchGate</a>
+  <!-- Quick Links -->
+  <section class="section">
+    <h2 class="section-title">Explore More</h2>
+    <div class="projects-grid">
+      <a href="projects.html" class="project-card" style="text-decoration: none; color: inherit;">
+        <h3 class="project-title">📁 Projects & Publications</h3>
+        <p class="project-description">
+          View my latest projects and research publications showcasing innovative data science solutions and AI applications.
+        </p>
+      </a>
+      <a href="experience.html" class="project-card" style="text-decoration: none; color: inherit;">
+        <h3 class="project-title">💼 Education & Experience</h3>
+        <p class="project-description">
+          Learn about my academic background, work experience, and professional journey in data science and analytics.
+        </p>
+      </a>
+      <a href="contact.html" class="project-card" style="text-decoration: none; color: inherit;">
+        <h3 class="project-title">📬 Get In Touch</h3>
+        <p class="project-description">
+          Let's discuss opportunities, collaborations, or just connect to explore how we can work together on exciting projects.
+        </p>
+      </a>
     </div>
   </section>
 
-  <footer class="text-center text-xs text-gray-500 py-6">© 2025 Prannay Khushalani. Built with 💻 & ☕</footer>
+  <footer>
+    <div class="text-center">
+      <p>© 2025 Prannay Khushalani. Built with 💻 & ☕</p>
+    </div>
+  </footer>
 
+  <script src="script.js"></script>
+  <script src="bg-canvas.js"></script>
 </body>
 </html>

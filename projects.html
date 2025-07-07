@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Publications | Prannay Khushalani</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦉</text></svg>">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Prannay Khushalani</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero">
+    <h1 class="hero-title">Projects & Publications</h1>
+    <p class="hero-subtitle">Showcasing my work in data science, machine learning, and research</p>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="section">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3 class="project-title">"Owlie" GPT Chatbot</h3>
+        <p class="project-description">
+          Engineered an NLP-driven chatbot using Retrieval-Augmented Generation (RAG), Sentence Transformers, and LLAMA3-70B LLM (Groq API) 
+          to deliver precise, context-aware responses. Improved response accuracy by ~85% and reduced latency by ~95% to 3 seconds per answer.
+        </p>
+        <p class="project-description">
+          Designed scalable web-scraping and FAISS vector indexing for 5,000+ JSOM webpages. Collaborated with UT Dallas JSOM leadership 
+          to enhance chatbot accuracy and scalability.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">RAG</span>
+          <span class="tech-tag">LLAMA3-70B</span>
+          <span class="tech-tag">Groq API</span>
+          <span class="tech-tag">FAISS</span>
+          <span class="tech-tag">Python</span>
+        </div>
+        <div class="project-links">
+          <a href="#owlie-presentation" class="btn btn-small" onclick="togglePresentation('owlie-presentation')">
+            📊 View Presentation
+          </a>
+          <a href="presentations/owlie-chatbot-presentation.pdf" target="_blank" class="btn btn-small btn-outline">
+            📥 Download PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Credit Risk Evaluation Model</h3>
+        <p class="project-description">
+          Engineered a machine learning-based credit risk model in Python, reducing loan default rates from 25.8% to 3% (88.4% improvement) 
+          using XGBoost and Neural Networks. Validated data pipelines with SQL for high data quality during feature engineering and model deployment.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">XGBoost</span>
+          <span class="tech-tag">Neural Networks</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">88.4% Improvement</span>
+        </div>
+        <div class="project-links">
+          <a href="#credit-risk-presentation" class="btn btn-small" onclick="togglePresentation('credit-risk-presentation')">
+            📊 View Presentation
+          </a>
+          <a href="presentations/credit-risk-presentation.pdf" target="_blank" class="btn btn-small btn-outline">
+            📥 Download PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">ASR for Indian Regional Languages</h3>
+        <p class="project-description">
+          Developed an Automatic Speech Recognition system for low-resourced Indian regional languages, specifically focusing on Tamil. 
+          Achieved 61.3% Word Error Rate (WER) on Mozilla Common Voice dataset, outperforming previous WER of 69.76%. 
+          Published in Springer's Advances in Data Science and Computing Technologies.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Speech Recognition</span>
+          <span class="tech-tag">Wav2Vec2</span>
+          <span class="tech-tag">NLP</span>
+          <span class="tech-tag">Springer Publication</span>
+          <span class="tech-tag">61.3% WER</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Disease Prediction using Ensemble Learning</h3>
+        <p class="project-description">
+          Implemented ensemble learning techniques (SVC, Naive Bayes, Decision Trees) to predict diseases, increasing accuracy from 95% to 99%. 
+          Reduced data processing time by 42% using SQL. Published research demonstrating a 25% increase in predictive accuracy for multi-disease prediction.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Ensemble Learning</span>
+          <span class="tech-tag">SVC</span>
+          <span class="tech-tag">Naive Bayes</span>
+          <span class="tech-tag">99% Accuracy</span>
+          <span class="tech-tag">IEEE Publication</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Presentations -->
+  <section class="section">
+    <h2 class="section-title">Project Presentations</h2>
+    
+    <!-- Owlie Chatbot Presentation -->
+    <div id="owlie-presentation" class="presentation-container" style="display: none;">
+      <div class="presentation-header">
+        <h3>"Owlie" GPT Chatbot - Project Presentation</h3>
+        <button class="close-btn" onclick="togglePresentation('owlie-presentation')">×</button>
+      </div>
+      <div class="presentation-content">
+        <iframe src="presentations/owlie-chatbot-presentation.pdf" width="100%" height="600px" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <!-- Credit Risk Presentation -->
+    <div id="credit-risk-presentation" class="presentation-container" style="display: none;">
+      <div class="presentation-header">
+        <h3>Credit Risk Evaluation Model - Project Presentation</h3>
+        <button class="close-btn" onclick="togglePresentation('credit-risk-presentation')">×</button>
+      </div>
+      <div class="presentation-content">
+        <iframe src="presentations/credit-risk-presentation.pdf" width="100%" height="600px" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Projects -->
+  <section class="section">
+    <h2 class="section-title">Other Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3 class="project-title">ASR using NVIDIA's NeMo Framework</h3>
+        <p class="project-description">
+          Explored NVIDIA's NeMo framework for Automatic Speech Recognition in Indian regional languages. 
+          Investigated the effectiveness of pre-trained models and fine-tuning techniques for low-resource language processing.
+          Published in AIP Conference Proceedings.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">NeMo Framework</span>
+          <span class="tech-tag">NVIDIA</span>
+          <span class="tech-tag">Speech Recognition</span>
+          <span class="tech-tag">AIP Publication</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Healthcare Analytics & ML Applications</h3>
+        <p class="project-description">
+          Comprehensive study on machine learning applications in healthcare analytics, focusing on predictive modeling, 
+          patient outcome prediction, and medical data analysis using modern AI/ML techniques and ensemble methods.
+          Published in IEEE International Conference.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">Healthcare Analytics</span>
+          <span class="tech-tag">Predictive Modeling</span>
+          <span class="tech-tag">IEEE Publication</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Customer Segmentation Analysis</h3>
+        <p class="project-description">
+          K-means clustering for customer segmentation using Python and scikit-learn. Analyzed customer behavior patterns 
+          to create targeted marketing strategies.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Scikit-learn</span>
+          <span class="tech-tag">K-means</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Sales Forecasting Model</h3>
+        <p class="project-description">
+          Time series analysis and forecasting using ARIMA and Prophet models. Provided accurate sales predictions 
+          for business planning and inventory management.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Prophet</span>
+          <span class="tech-tag">ARIMA</span>
+          <span class="tech-tag">Time Series</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Sentiment Analysis Tool</h3>
+        <p class="project-description">
+          NLP-based sentiment analysis for social media data using transformers. Built a tool to analyze customer 
+          feedback and social media sentiment in real-time.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Transformers</span>
+          <span class="tech-tag">NLP</span>
+          <span class="tech-tag">Sentiment Analysis</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Data Pipeline Automation</h3>
+        <p class="project-description">
+          ETL pipeline automation using Apache Airflow and Python. Created automated workflows for data processing, 
+          transformation, and loading operations.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Airflow</span>
+          <span class="tech-tag">ETL</span>
+          <span class="tech-tag">Automation</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Recommendation System</h3>
+        <p class="project-description">
+          Collaborative filtering recommendation system using matrix factorization. Built a personalized recommendation 
+          engine for e-commerce applications.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Surprise</span>
+          <span class="tech-tag">Matrix Factorization</span>
+          <span class="tech-tag">Recommendations</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Web Scraping Tool</h3>
+        <p class="project-description">
+          Automated data collection tool using BeautifulSoup and Selenium. Created a robust web scraping solution 
+          for gathering market research data and competitive intelligence.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Selenium</span>
+          <span class="tech-tag">BeautifulSoup</span>
+          <span class="tech-tag">Web Scraping</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section class="section">
+    <h2 class="section-title">Research Publications</h2>
+    <div class="publications-grid">
+      <div class="publication-card">
+        <div class="publication-header">
+          <h3 class="publication-title">ASR for Indian Regional Languages Using Fine-Tuned Wav2Vec2 Model</h3>
+          <div class="publication-links">
+            <a href="https://link.springer.com/chapter/10.1007/978-981-99-3656-4_14" target="_blank" class="btn btn-small">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.493-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+              </svg>
+              Springer
+            </a>
+            <a href="https://www.researchgate.net/profile/Prannay_Khushalani" target="_blank" class="btn btn-small">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.493-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+              </svg>
+              ResearchGate
+            </a>
+          </div>
+        </div>
+        <p class="publication-meta">Advances in Data Science and Computing Technologies (ADSC 2022), Springer Nature Singapore | September 30, 2023</p>
+        <p class="publication-abstract">
+          Developed an Automatic Speech Recognition system for low-resourced Indian regional languages, specifically focusing on Tamil. 
+          Achieved 61.3% Word Error Rate (WER) on Mozilla Common Voice dataset, outperforming previous WER of 69.76%. 
+          Used pre-training Wav2Vec2 model with fine-tuning through linear layer addition and custom tokenizer implementation.
+        </p>
+        <div class="publication-tech">
+          <span class="tech-tag">Speech Recognition</span>
+          <span class="tech-tag">Wav2Vec2</span>
+          <span class="tech-tag">NLP</span>
+          <span class="tech-tag">Springer Publication</span>
+          <span class="tech-tag">61.3% WER</span>
+        </div>
+      </div>
+
+
+
+      <div class="publication-card">
+        <div class="publication-header">
+          <h3 class="publication-title">Predictive Analysis of Multiple Diseases using Ensemble Learning</h3>
+          <div class="publication-links">
+            <a href="https://ieeexplore.ieee.org/document/10074233" target="_blank" class="btn btn-small">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.493-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+              </svg>
+              IEEE
+            </a>
+            <a href="https://www.researchgate.net/profile/Prannay_Khushalani" target="_blank" class="btn btn-small">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.493-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+              </svg>
+              ResearchGate
+            </a>
+          </div>
+        </div>
+        <p class="publication-meta">IEEE International Conference | 2023</p>
+        <p class="publication-abstract">
+          Implemented ensemble learning techniques (SVC, Naive Bayes, Decision Trees) to predict diseases, increasing accuracy from 95% to 99%. 
+          Reduced data processing time by 42% using SQL. Published research demonstrating a 25% increase in predictive accuracy for multi-disease prediction.
+        </p>
+        <div class="publication-tech">
+          <span class="tech-tag">Ensemble Learning</span>
+          <span class="tech-tag">SVC</span>
+          <span class="tech-tag">Naive Bayes</span>
+          <span class="tech-tag">99% Accuracy</span>
+          <span class="tech-tag">Healthcare</span>
+        </div>
+      </div>
+
+      <div class="publication-card">
+        <div class="publication-header">
+          <h3 class="publication-title">ASR for Indian Regional Language using NVIDIA's NeMo Framework</h3>
+          <div class="publication-links">
+            <a href="https://pubs.aip.org/aip/acp/article-abstract/2851/1/020004/2921910/ASR-for-Indian-regional-language-using-Nvidia-s?redirectedFrom=fulltext" target="_blank" class="btn btn-small">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.493-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+              </svg>
+              AIP
+            </a>
+            <a href="https://www.researchgate.net/profile/Prannay_Khushalani" target="_blank" class="btn btn-small">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.493-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+              </svg>
+              ResearchGate
+            </a>
+          </div>
+        </div>
+        <p class="publication-meta">AIP Conference Proceedings | 2023</p>
+        <p class="publication-abstract">
+          Explored NVIDIA's NeMo framework for Automatic Speech Recognition in Indian regional languages. 
+          Investigated the effectiveness of pre-trained models and fine-tuning techniques for low-resource language processing.
+        </p>
+        <div class="publication-tech">
+          <span class="tech-tag">NeMo Framework</span>
+          <span class="tech-tag">NVIDIA</span>
+          <span class="tech-tag">Speech Recognition</span>
+          <span class="tech-tag">Low-Resource Languages</span>
+        </div>
+      </div>
+
+      <div class="publication-card">
+        <div class="publication-header">
+          <h3 class="publication-title">Advanced Machine Learning Applications in Healthcare</h3>
+          <div class="publication-links">
+            <a href="https://ieeexplore.ieee.org/document/10088335" target="_blank" class="btn btn-small">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.493-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+              </svg>
+              IEEE
+            </a>
+            <a href="https://www.researchgate.net/profile/Prannay_Khushalani" target="_blank" class="btn btn-small">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.493-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+              </svg>
+              ResearchGate
+            </a>
+          </div>
+        </div>
+        <p class="publication-meta">IEEE International Conference | 2023</p>
+        <p class="publication-abstract">
+          Comprehensive study on machine learning applications in healthcare analytics, focusing on predictive modeling, 
+          patient outcome prediction, and medical data analysis using modern AI/ML techniques and ensemble methods.
+        </p>
+        <div class="publication-tech">
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">Healthcare Analytics</span>
+          <span class="tech-tag">Predictive Modeling</span>
+          <span class="tech-tag">Medical AI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+      <a href="https://www.researchgate.net/profile/Prannay_Khushalani" target="_blank" class="btn btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+          <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.493-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/>
+        </svg>
+        View Full ResearchGate Profile
+      </a>
+    </div>
+  </section>
+
+  <!-- Research Interests & Areas -->
+  <section class="section">
+    <h2 class="section-title">Research Interests & Areas</h2>
+    <div class="card">
+      <h3 class="card-title">Current Research Focus</h3>
+      <p class="card-text">
+        My research interests span across multiple domains in data science and artificial intelligence, with a particular focus on:
+      </p>
+      <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+          <strong>Natural Language Processing:</strong> Speech recognition, language models, and multilingual AI systems
+        </li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+          <strong>Healthcare Analytics:</strong> Disease prediction, patient outcome modeling, and medical data analysis
+        </li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+          <strong>Machine Learning:</strong> Ensemble methods, deep learning, and predictive modeling applications
+        </li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+          <strong>Large Language Models:</strong> RAG systems, fine-tuning, and AI-powered applications
+        </li>
+        <li style="padding: 0.5rem 0;">
+          <strong>Data Science:</strong> Business analytics, data visualization, and strategic decision-making
+        </li>
+      </ul>
+      <p class="card-text">
+        I'm actively involved in research collaborations and always open to discussing new research opportunities and partnerships.
+      </p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section">
+    <div class="card text-center">
+      <h3 class="card-title">Interested in collaborating?</h3>
+      <p class="card-text">
+        I'm always open to discussing new opportunities, interesting projects, or potential collaborations. 
+        Let's work together on something amazing!
+      </p>
+      <div class="mt-2">
+        <a href="contact.html" class="btn">Get in Touch</a>
+        <a href="assets/Prannay_Khushalani_Resume_V3.pdf" class="btn btn-outline">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="text-center">
+      <p>© 2025 Prannay Khushalani. Built with 💻 & ☕</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="bg-canvas.js"></script>
+</body>
+</html> 
