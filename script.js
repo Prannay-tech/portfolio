@@ -38,11 +38,18 @@ document.addEventListener('DOMContentLoaded', function() {
             formMessage.style.display = 'none';
             formMessage.className = 'form-message';
             
-            // Simulate form submission (in a real implementation, you'd send this to a server)
-            setTimeout(() => {
-                // Create mailto link for now (you can integrate with EmailJS, Formspree, or similar services)
-                const mailtoLink = `mailto:prannay.khushalani5@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-                
+            // Initialize EmailJS
+            emailjs.init('DPc5dRXPLGpVhXBm0');
+            
+            // Send email using EmailJS
+            emailjs.send('service_dx2i0zd', 'template_k8w35yv', {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message,
+                to_email: 'prannay.khushalani5@gmail.com'
+            })
+            .then(function(response) {
                 // Show success message
                 formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
                 formMessage.className = 'form-message success';
@@ -59,10 +66,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => {
                     formMessage.style.display = 'none';
                 }, 5000);
+            })
+            .catch(function(error) {
+                // Show error message
+                formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email me directly.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
                 
-                // Optionally open email client
-                // window.open(mailtoLink);
-            }, 1000);
+                // Reset button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            });
         });
     }
 
