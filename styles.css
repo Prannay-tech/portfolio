@@ -1143,3 +1143,86 @@ body > *:not(#bg-canvas) {
   color: #dc2626;
   border: 1px solid rgba(239, 68, 68, 0.2);
 } 
+
+/* --- EXPERIENCE & EDUCATION FONT IMPROVEMENTS --- */
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.experience-company {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+
+.experience-date {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.2rem;
+  white-space: nowrap;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+  .experience-title {
+    font-size: 1.15rem;
+  }
+  .experience-company {
+    font-size: 1rem;
+  }
+  .experience-date {
+    font-size: 0.85rem;
+    margin-top: 0.1rem;
+  }
+}
+
+/* --- PROJECTS FONT IMPROVEMENTS --- */
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.project-description {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.project-tech, .project-links, .tech-tag {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .project-title {
+    font-size: 1.1rem;
+  }
+  .project-description {
+    font-size: 0.97rem;
+  }
+  .project-tech, .project-links, .tech-tag {
+    font-size: 0.85rem;
+  }
+} 
