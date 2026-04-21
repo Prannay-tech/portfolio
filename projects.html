@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects & Publications | Prannay Khushalani</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
-
 </head>
 <body>
   <canvas id="bg-canvas"></canvas>
@@ -26,212 +25,404 @@
 
   <!-- Header -->
   <section class="hero">
-    <h1 class="hero-title">Projects & Publications</h1>
-    <p class="hero-subtitle">Showcasing my work in data science, machine learning, and research</p>
+    <h1 class="hero-title">Projects &amp; Publications</h1>
+    <p class="hero-subtitle">AI engineering, data pipelines, predictive modeling, and peer-reviewed research</p>
+    <div class="hero-badges" style="margin-top: 1.5rem;">
+      <span class="hero-badge">10+ Projects</span>
+      <span class="hero-badge">4 Publications</span>
+      <span class="hero-badge">IEEE · Springer · AIP</span>
+    </div>
   </section>
 
-  <!-- Data Science/AI/ML Projects -->
+  <!-- AI / ML Engineering Projects -->
   <section class="section">
-    <h2 class="section-title">Data Science & AI/ML Projects</h2>
+    <h2 class="section-title">AI &amp; ML Engineering</h2>
     <div class="projects-grid">
+
       <div class="project-card">
+        <div class="project-category-badge badge-ai">AI Engineering</div>
         <h3 class="project-title">"Owlie" GPT Chatbot</h3>
         <p class="project-description">
-          Engineered an NLP-driven chatbot using Retrieval-Augmented Generation (RAG), Sentence Transformers, and LLAMA3-70B LLM (Groq API) 
-          to deliver precise, context-aware responses. Improved response accuracy by ~85% and reduced latency by ~95% to 3 seconds per answer.
-        </p>
-        <p class="project-description">
-          Designed scalable web-scraping and FAISS vector indexing for 5,000+ JSOM webpages. Collaborated with UT Dallas JSOM leadership 
-          to enhance chatbot accuracy and scalability.
+          Production RAG pipeline powering a university-facing chatbot. Engineered with Sentence Transformers,
+          LLAMA3-70B (Groq API), and FAISS vector indexing over 5,000+ JSOM webpages via custom web scraping.
+          Improved response accuracy by ~85% and cut latency by ~95% to under 3 seconds per query.
+          Deployed and validated with UT Dallas JSOM leadership.
         </p>
         <div class="project-tech">
           <span class="tech-tag">RAG</span>
           <span class="tech-tag">LLAMA3-70B</span>
           <span class="tech-tag">Groq API</span>
           <span class="tech-tag">FAISS</span>
+          <span class="tech-tag">Sentence Transformers</span>
           <span class="tech-tag">Python</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Prannay-tech/owl_frontend" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://owl-frontend-pied.vercel.app" target="_blank" class="btn-link btn-link-live">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Live Demo
+          </a>
+          <a href="presentations/owlie-chatbot-presentation.pdf" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Slides
+          </a>
         </div>
       </div>
 
       <div class="project-card">
+        <div class="project-category-badge badge-ml">ML Engineering</div>
         <h3 class="project-title">Credit Risk Evaluation Model</h3>
         <p class="project-description">
-          Engineered a machine learning-based credit risk model in Python, reducing loan default rates from 25.8% to 3% (88.4% improvement) 
-          using XGBoost and Neural Networks. Validated data pipelines with SQL for high data quality during feature engineering and model deployment.
+          End-to-end ML pipeline that reduced loan default rates from 25.8% to 3% — an 88.4% improvement.
+          Built with XGBoost and Neural Networks with SQL-validated data pipelines for feature engineering
+          and model deployment. Comprehensive evaluation across precision, recall, and AUC metrics.
         </p>
         <div class="project-tech">
           <span class="tech-tag">Python</span>
           <span class="tech-tag">XGBoost</span>
           <span class="tech-tag">Neural Networks</span>
           <span class="tech-tag">SQL</span>
+          <span class="tech-tag">Feature Engineering</span>
           <span class="tech-tag">88.4% Improvement</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Prannay-tech/Credit-Risk-Project" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="presentations/credit-risk-presentation.pdf" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Presentation
+          </a>
         </div>
       </div>
 
       <div class="project-card">
-        <h3 class="project-title">Disease Prediction using Ensemble Learning</h3>
+        <div class="project-category-badge badge-ai">AI Engineering</div>
+        <h3 class="project-title">Renewable Energy Investment Dashboard</h3>
         <p class="project-description">
-          Implemented ensemble learning techniques (SVC, Naive Bayes, Decision Trees) to predict diseases, increasing accuracy from 95% to 99%. 
-          Reduced data processing time by 42% using SQL. Published research demonstrating a 25% increase in predictive accuracy for multi-disease prediction.
+          U.S. renewable energy investment analysis platform with real-time EIA &amp; FRED data feeds,
+          IRR/NPV/LCOE financial modelling, and an integrated Claude AI research assistant for natural
+          language queries. Interactive charts, state-level breakdowns, and investment scenario comparisons.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Claude AI</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">EIA API</span>
+          <span class="tech-tag">FRED API</span>
+          <span class="tech-tag">Financial Modelling</span>
+          <span class="tech-tag">Vercel</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Prannay-tech/renewable-energy-dashboard" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://src-nu-red.vercel.app" target="_blank" class="btn-link btn-link-live">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Live Demo
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-category-badge badge-ai">AI Engineering</div>
+        <h3 class="project-title">Travel AI — LLM Itinerary Planner</h3>
+        <p class="project-description">
+          AI-powered travel planning assistant that generates personalized itineraries using LLM inference.
+          Clean web frontend built with React, backed by a FastAPI service handling itinerary generation,
+          routing logic, and user preference management. Modular backend designed for scalability.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">LLM</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">REST API</span>
+          <span class="tech-tag">Itinerary Generation</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Prannay-tech/travel-ai" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Frontend
+          </a>
+          <a href="https://github.com/Prannay-tech/travel-ai-backend" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Backend API
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-category-badge badge-ml">ML Engineering</div>
+        <h3 class="project-title">Disease Prediction via Ensemble Learning</h3>
+        <p class="project-description">
+          Ensemble model combining SVC, Naive Bayes, and Decision Trees to predict multiple diseases,
+          raising accuracy from 95% to 99%. Reduced data processing time 42% via SQL optimization.
+          Research published in IJRTE demonstrating a 25% increase in predictive accuracy for
+          multi-disease scenarios.
         </p>
         <div class="project-tech">
           <span class="tech-tag">Ensemble Learning</span>
           <span class="tech-tag">SVC</span>
           <span class="tech-tag">Naive Bayes</span>
+          <span class="tech-tag">Decision Trees</span>
+          <span class="tech-tag">SQL</span>
           <span class="tech-tag">99% Accuracy</span>
-          <span class="tech-tag">IEEE Publication</span>
+        </div>
+        <div class="project-links">
+          <a href="https://ieeexplore.ieee.org/document/10074233" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            IEEE Publication
+          </a>
         </div>
       </div>
 
       <div class="project-card">
-        <h3 class="project-title">ASR for Indian Regional Languages</h3>
+        <div class="project-category-badge badge-nlp">NLP Research</div>
+        <h3 class="project-title">ASR for Indian Regional Languages (Wav2Vec2)</h3>
         <p class="project-description">
-          Developed an Automatic Speech Recognition system for low-resourced Indian regional languages, specifically focusing on Tamil. 
-          Achieved 61.3% Word Error Rate (WER) on Mozilla Common Voice dataset, outperforming previous WER of 69.76%. 
-          Published in Springer's Advances in Data Science and Computing Technologies.
+          Automatic Speech Recognition system for low-resource Tamil language using fine-tuned Wav2Vec2
+          with a custom linear layer and tokenizer. Achieved 61.3% WER on Mozilla Common Voice dataset,
+          outperforming the prior state-of-the-art 69.76% WER. Published in Springer's Advances in
+          Data Science and Computing Technologies.
         </p>
         <div class="project-tech">
-          <span class="tech-tag">Speech Recognition</span>
           <span class="tech-tag">Wav2Vec2</span>
+          <span class="tech-tag">Fine-tuning</span>
           <span class="tech-tag">NLP</span>
+          <span class="tech-tag">PyTorch</span>
+          <span class="tech-tag">Low-Resource ASR</span>
           <span class="tech-tag">Springer Publication</span>
-          <span class="tech-tag">61.3% WER</span>
+        </div>
+        <div class="project-links">
+          <a href="https://link.springer.com/chapter/10.1007/978-981-99-3656-4_14" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Springer Publication
+          </a>
         </div>
       </div>
 
       <div class="project-card">
-        <h3 class="project-title">ASR using NVIDIA's NeMo Framework</h3>
+        <div class="project-category-badge badge-nlp">NLP Research</div>
+        <h3 class="project-title">ASR with NVIDIA NeMo Framework</h3>
         <p class="project-description">
-          Explored NVIDIA's NeMo framework for Automatic Speech Recognition in Indian regional languages. 
-          Investigated the effectiveness of pre-trained models and fine-tuning techniques for low-resource language processing.
-          Published in AIP Conference Proceedings.
+          Explored NVIDIA's NeMo framework for Automatic Speech Recognition on Indian regional languages.
+          Investigated pre-trained model effectiveness and fine-tuning strategies for low-resource
+          language processing. Research published in AIP Conference Proceedings.
         </p>
         <div class="project-tech">
-          <span class="tech-tag">NeMo Framework</span>
-          <span class="tech-tag">NVIDIA</span>
+          <span class="tech-tag">NVIDIA NeMo</span>
           <span class="tech-tag">Speech Recognition</span>
+          <span class="tech-tag">Fine-tuning</span>
+          <span class="tech-tag">Low-Resource NLP</span>
           <span class="tech-tag">AIP Publication</span>
         </div>
+        <div class="project-links">
+          <a href="https://pubs.aip.org/aip/acp/article-abstract/2851/1/020004/2921910/ASR-for-Indian-regional-language-using-Nvidia-s?redirectedFrom=fulltext" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            AIP Publication
+          </a>
+        </div>
       </div>
 
       <div class="project-card">
-        <h3 class="project-title">Healthcare Analytics & ML Applications</h3>
+        <div class="project-category-badge badge-ml">ML Research</div>
+        <h3 class="project-title">Healthcare Analytics &amp; ML Applications</h3>
         <p class="project-description">
-          Comprehensive study on machine learning applications in healthcare analytics, focusing on predictive modeling, 
-          patient outcome prediction, and medical data analysis using modern AI/ML techniques and ensemble methods.
-          Published in IEEE International Conference.
+          Comprehensive study on ML applications in healthcare — predictive modeling, patient outcome
+          prediction, and medical data analysis using ensemble methods and modern AI/ML techniques.
+          Published in IEEE International Conference proceedings.
         </p>
         <div class="project-tech">
           <span class="tech-tag">Machine Learning</span>
-          <span class="tech-tag">Healthcare Analytics</span>
+          <span class="tech-tag">Healthcare AI</span>
           <span class="tech-tag">Predictive Modeling</span>
+          <span class="tech-tag">Ensemble Methods</span>
           <span class="tech-tag">IEEE Publication</span>
         </div>
+        <div class="project-links">
+          <a href="https://ieeexplore.ieee.org/document/10088335" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            IEEE Publication
+          </a>
+        </div>
       </div>
+
     </div>
   </section>
 
-
-
-  <!-- Data Analytics/BI Projects -->
+  <!-- Data Analytics & BI Projects -->
   <section class="section">
-    <h2 class="section-title">Data Analytics & Business Intelligence Projects</h2>
+    <h2 class="section-title">Data Analytics &amp; Business Intelligence</h2>
     <div class="projects-grid">
+
       <div class="project-card">
-        <h3 class="project-title">Telco Customer Churn & Feedback Analytics Dashboard</h3>
+        <div class="project-category-badge badge-de">Data Analytics</div>
+        <h3 class="project-title">Olist E-Commerce Churn Analysis</h3>
         <p class="project-description">
-          Consolidated and prepared 7,000+ telco customer records and feedback using SQL for data extraction and Excel for data wrangling, reducing manual processing time by 35%.
-        </p>
-        <p class="project-description">
-          Built interactive dashboards in Power BI and Excel to visualize customer churn patterns, sentiment from feedback, and key contract and usage metrics, surfacing segments with churn rates up to 42%.
-        </p>
-        <p class="project-description">
-          Applied sentiment analysis and cohort segmentation to customer feedback, identifying pain points and satisfaction drivers that informed retention strategies projected to lower churn by 10% and boost customer satisfaction scores by 15%.
+          Customer churn analysis on the Olist Brazilian e-commerce dataset. Applied RFM segmentation
+          and cohort analysis to identify at-risk customer segments, then built predictive models to
+          classify churn likelihood. Delivered actionable retention insights from real transaction-level data.
         </p>
         <div class="project-tech">
-          <span class="tech-tag">Alteryx</span>
-          <span class="tech-tag">Excel</span>
-          <span class="tech-tag">Power BI</span>
-          <span class="tech-tag">SQL</span>
-          <span class="tech-tag">Sentiment Analysis</span>
-          <span class="tech-tag">7,000+ Records</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">RFM Segmentation</span>
+          <span class="tech-tag">Cohort Analysis</span>
+          <span class="tech-tag">Predictive Modelling</span>
+          <span class="tech-tag">Pandas</span>
+          <span class="tech-tag">Scikit-learn</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Prannay-tech/Olist-Churn-Analysis" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
 
       <div class="project-card">
-        <h3 class="project-title">Pharmaceutical Safety & Patient Sentiment Analytics Dashboard</h3>
+        <div class="project-category-badge badge-ai">AI Tool</div>
+        <h3 class="project-title">JobTrack — Chrome Extension</h3>
         <p class="project-description">
-          Extracted and cleaned 130,000+ pharmaceutical records using SQL and Alteryx, then validated and performed ad hoc analysis in Excel, ensuring high-quality, analysis-ready data for business intelligence dashboards.
-        </p>
-        <p class="project-description">
-          Built interactive dashboards in Power BI to visualize drug safety incidents, side effect frequencies, and patient sentiment, enabling advanced filtering by over 1,000 drugs and 500 conditions.
-        </p>
-        <p class="project-description">
-          Segmented drugs by safety classification and sentiment, uncovering actionable trends projected to improve prescription safety compliance by 18% and support targeted patient education initiatives.
+          Chrome extension that lets you track job applications directly from any job board — save listings,
+          update application status, and add notes without leaving the page. Streamlines the job hunt
+          workflow with a clean, minimal UI and persistent local storage.
         </p>
         <div class="project-tech">
-          <span class="tech-tag">Alteryx</span>
-          <span class="tech-tag">Excel</span>
-          <span class="tech-tag">Power BI</span>
-          <span class="tech-tag">SQL</span>
-          <span class="tech-tag">Healthcare Analytics</span>
-          <span class="tech-tag">130,000+ Records</span>
+          <span class="tech-tag">Chrome Extension</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">HTML/CSS</span>
+          <span class="tech-tag">Local Storage</span>
+          <span class="tech-tag">Productivity</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Prannay-tech/jobtrack-extension" target="_blank" class="btn-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
 
-      <div class="project-card">
-        <h3 class="project-title">BMW Car Sales Performance Dashboard</h3>
-        <p class="project-description">
-          Queried and integrated 50,000+ BMW sales records from relational databases using SQL, performed data cleansing and transformation in Excel, and prepared datasets for analytics and reporting.
-        </p>
-        <p class="project-description">
-          Developed Power BI dashboards to identify top-performing car models, track sales KPIs, and visualize inventory turnover across 30+ dealership locations, contributing to a 22% increase in quarterly sales and an 18% improvement in inventory turnover rates.
-        </p>
-        <p class="project-description">
-          Analyzed customer segmentation and sales patterns in Excel, informing strategies that reduced excess inventory by 12% and improved sales forecasting accuracy by 15%.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">Excel</span>
-          <span class="tech-tag">Power BI</span>
-          <span class="tech-tag">SQL</span>
-          <span class="tech-tag">Sales Analytics</span>
-          <span class="tech-tag">50,000+ Records</span>
-          <span class="tech-tag">22% Sales Increase</span>
-        </div>
-      </div>
     </div>
   </section>
 
-
-
-  <!-- Research Interests & Areas -->
+  <!-- Research Publications -->
   <section class="section">
-    <h2 class="section-title">Research Interests & Areas</h2>
-    <div class="card">
-      <h3 class="card-title">Current Research Focus</h3>
-      <p class="card-text">
-        My research interests span across multiple domains in data science and artificial intelligence, with a particular focus on:
-      </p>
-      <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
-          <strong>Natural Language Processing:</strong> Speech recognition, language models, and multilingual AI systems
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
-          <strong>Healthcare Analytics:</strong> Disease prediction, patient outcome modeling, and medical data analysis
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
-          <strong>Machine Learning:</strong> Ensemble methods, deep learning, and predictive modeling applications
-        </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
-          <strong>Large Language Models:</strong> RAG systems, fine-tuning, and AI-powered applications
-        </li>
-        <li style="padding: 0.5rem 0;">
-          <strong>Data Science:</strong> Business analytics, data visualization, and strategic decision-making
-        </li>
-      </ul>
-      <p class="card-text">
-        I'm actively involved in research collaborations and always open to discussing new research opportunities and partnerships.
-      </p>
+    <h2 class="section-title">Research Publications</h2>
+    <div class="publications-grid">
+
+      <div class="publication-card">
+        <div class="publication-header">
+          <div>
+            <span class="pub-venue-badge">Springer · 2023</span>
+            <h3 class="publication-title">ASR for Indian Regional Languages Using Fine-Tuned Wav2Vec2 Model</h3>
+            <p class="publication-meta">Advances in Data Science and Computing Technologies (ADSC 2022), Springer Nature Singapore</p>
+          </div>
+          <div class="publication-links">
+            <a href="https://link.springer.com/chapter/10.1007/978-981-99-3656-4_14" target="_blank" class="btn btn-small">
+              Read Paper
+            </a>
+          </div>
+        </div>
+        <p class="publication-abstract">
+          Developed an ASR system for low-resource Tamil using fine-tuned Wav2Vec2 with a custom tokenizer.
+          Achieved 61.3% WER on Mozilla Common Voice, outperforming prior 69.76% WER benchmark.
+        </p>
+        <div class="publication-tech">
+          <span class="tech-tag">Wav2Vec2</span>
+          <span class="tech-tag">NLP</span>
+          <span class="tech-tag">Speech Recognition</span>
+          <span class="tech-tag">PyTorch</span>
+          <span class="tech-tag">Low-Resource Languages</span>
+        </div>
+      </div>
+
+      <div class="publication-card">
+        <div class="publication-header">
+          <div>
+            <span class="pub-venue-badge">IEEE · 2023</span>
+            <h3 class="publication-title">Predictive Analysis of Multiple Diseases Using Ensemble Learning</h3>
+            <p class="publication-meta">IEEE International Conference on Intelligent Systems and Emerging Technologies</p>
+          </div>
+          <div class="publication-links">
+            <a href="https://ieeexplore.ieee.org/document/10074233" target="_blank" class="btn btn-small">
+              Read Paper
+            </a>
+          </div>
+        </div>
+        <p class="publication-abstract">
+          Ensemble of SVC, Naive Bayes, and Decision Trees raised disease prediction accuracy from 95% to 99%.
+          SQL optimization cut data processing time 42%. Demonstrated 25% improvement in multi-disease
+          prediction accuracy.
+        </p>
+        <div class="publication-tech">
+          <span class="tech-tag">Ensemble Learning</span>
+          <span class="tech-tag">SVC</span>
+          <span class="tech-tag">Naive Bayes</span>
+          <span class="tech-tag">Healthcare AI</span>
+          <span class="tech-tag">99% Accuracy</span>
+        </div>
+      </div>
+
+      <div class="publication-card">
+        <div class="publication-header">
+          <div>
+            <span class="pub-venue-badge">AIP · 2023</span>
+            <h3 class="publication-title">ASR for Indian Regional Language Using NVIDIA's NeMo Framework</h3>
+            <p class="publication-meta">AIP Conference Proceedings</p>
+          </div>
+          <div class="publication-links">
+            <a href="https://pubs.aip.org/aip/acp/article-abstract/2851/1/020004/2921910/ASR-for-Indian-regional-language-using-Nvidia-s?redirectedFrom=fulltext" target="_blank" class="btn btn-small">
+              Read Paper
+            </a>
+          </div>
+        </div>
+        <p class="publication-abstract">
+          Investigated NVIDIA NeMo's pre-trained models and fine-tuning strategies for ASR on Indian
+          regional languages, advancing low-resource speech processing research.
+        </p>
+        <div class="publication-tech">
+          <span class="tech-tag">NVIDIA NeMo</span>
+          <span class="tech-tag">Speech Recognition</span>
+          <span class="tech-tag">Fine-tuning</span>
+          <span class="tech-tag">Low-Resource NLP</span>
+        </div>
+      </div>
+
+      <div class="publication-card">
+        <div class="publication-header">
+          <div>
+            <span class="pub-venue-badge">IEEE · 2023</span>
+            <h3 class="publication-title">Advanced Machine Learning Applications in Healthcare</h3>
+            <p class="publication-meta">IEEE International Conference on Emerging Technologies</p>
+          </div>
+          <div class="publication-links">
+            <a href="https://ieeexplore.ieee.org/document/10088335" target="_blank" class="btn btn-small">
+              Read Paper
+            </a>
+          </div>
+        </div>
+        <p class="publication-abstract">
+          Comprehensive study of ML applications in healthcare analytics — predictive modeling,
+          patient outcome prediction, and medical data analysis using modern AI/ML and ensemble methods.
+        </p>
+        <div class="publication-tech">
+          <span class="tech-tag">Healthcare AI</span>
+          <span class="tech-tag">Predictive Modeling</span>
+          <span class="tech-tag">Ensemble Methods</span>
+          <span class="tech-tag">Medical Data Analysis</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-3">
+      <a href="https://www.researchgate.net/profile/Prannay_Khushalani" target="_blank" class="btn btn-outline">
+        View Full ResearchGate Profile
+      </a>
     </div>
   </section>
 
@@ -240,23 +431,22 @@
     <div class="card text-center">
       <h3 class="card-title">Interested in collaborating?</h3>
       <p class="card-text">
-        I'm always open to discussing new opportunities, interesting projects, or potential collaborations. 
-        Let's work together on something amazing!
+        I'm open to AI engineering, data engineering, and data science opportunities. Let's build something impactful together.
       </p>
       <div class="mt-2">
         <a href="contact.html" class="btn">Get in Touch</a>
-        <a href="assets/Prannay_Khushalani_Resume.pdf" class="btn btn-outline">Download Resume</a>
+        <a href="assets/Prannay_Khushalani_Resume.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="text-center">
-      <p>© 2025 Prannay Khushalani. Built with 💻 & ☕</p>
+      <p>© 2025 Prannay Khushalani — AI Engineer &amp; Data Scientist</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script src="bg-canvas.js"></script>
+  <script src="bg-canvas.js?v=3"></script>
 </body>
-</html> 
+</html>
