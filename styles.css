@@ -4,34 +4,36 @@
 /* CSS Custom Properties for Dark Theme */
 :root {
   /* Dark Theme Colors */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #111111;
-  --bg-tertiary: #1a1a1a;
-  --bg-card: rgba(30, 30, 30, 0.7);
-  --bg-card-hover: rgba(37, 37, 37, 0.8);
-  --bg-hover: rgba(37, 37, 37, 0.6);
-  
+  --bg-primary: #080810;
+  --bg-secondary: #0e0e18;
+  --bg-tertiary: #13131f;
+  --bg-card: rgba(18, 18, 30, 0.75);
+  --bg-card-hover: rgba(24, 24, 40, 0.85);
+  --bg-hover: rgba(30, 30, 50, 0.6);
+
   /* Text Colors */
-  --text-primary: #ffffff;
-  --text-secondary: #b0b0b0;
-  --text-muted: #777777;
-  
+  --text-primary: #f0f0ff;
+  --text-secondary: #a0a0c0;
+  --text-muted: #606080;
+
   /* Accent Colors */
-  --accent-blue: #3b82f6;
-  --accent-green: #10b981;
-  --accent-purple: #8b5cf6;
+  --accent-blue: #6366f1;
+  --accent-green: #10d9a0;
+  --accent-purple: #a855f7;
   --accent-orange: #f59e0b;
-  
+
   /* Borders */
-  --border-color: rgba(51, 51, 51, 0.5);
-  --border-hover: rgba(68, 68, 68, 0.8);
-  
+  --border-color: rgba(99, 102, 241, 0.12);
+  --border-hover: rgba(99, 102, 241, 0.3);
+
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.1);
-  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.12);
+  --shadow-glow-green: 0 0 30px rgba(16, 217, 160, 0.1);
+  --shadow-glow-purple: 0 0 30px rgba(168, 85, 247, 0.12);
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s ease;
@@ -65,9 +67,9 @@ html {
 
 /* Navigation */
 nav {
-  background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  background: rgba(8, 8, 16, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
   position: fixed;
   top: 0;
   width: 100%;
@@ -485,21 +487,23 @@ nav {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: var(--accent-blue);
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue), var(--accent-green));
   border-radius: 2px;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
 }
 
 /* Cards */
 .card {
   background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  border-radius: 16px;
+  backdrop-filter: blur(24px);
+  border-radius: 18px;
   padding: 2.5rem;
   margin-bottom: 2rem;
   border: 1px solid var(--border-color);
   transition: all var(--transition-medium);
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 .card::before {
